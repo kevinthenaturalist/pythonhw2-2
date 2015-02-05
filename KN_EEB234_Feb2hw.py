@@ -55,6 +55,7 @@ genomic_dna_contents = open("genomic_dna.txt").read()
 exon_locations = open("exons.txt")
 coding_sequence = "" # creates an empty variable; loop will iteratively add the exons to this
 for line in exon_locations:
+    import pdb; pdb.set_trace() # python debugger to identify errors in code
     positions = line.split(',') # exons.txt has two numbers per line separated by a comma
     start = int(positions[0]) # output of line.split is a string; must convert to int here
     stop = int(positions[1]) 
